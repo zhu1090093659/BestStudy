@@ -34,9 +34,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author www.inxedu.com
- */
+
 @Controller
 @RequestMapping("/webapp")
 public class AppUserController extends BaseController{

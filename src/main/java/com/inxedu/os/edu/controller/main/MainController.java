@@ -24,10 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import java.util.*;
 
-/**
- * @author www.inxedu.com
- *
- */
+
 @Controller
 @RequestMapping("/admin/main")
 public class MainController extends BaseController{

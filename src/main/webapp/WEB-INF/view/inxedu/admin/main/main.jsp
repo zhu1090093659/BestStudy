@@ -119,32 +119,7 @@
 			return false;
 		}
 	</script>
-<%--<script type="text/javascript">
-	 /*sMenu*/
-	 $(function() {
-	     $("#ui-sMenu>div").each(function() {
-	         var _this = $(this),
-	                 _oT = _this.find("h3"),
-	                 _oTi = _oT.find(".ui-icon"),
-	                 _oC = _oT.next("div");
-	         _oT.click(function() {
-	             if(_oC.is(":hidden")) {
-            		 $("#ui-sMenu>div h3").removeClass("ui-state-active ui-corner-top").addClass("ui-state-default ui-corner-all");
-            		 $("#ui-sMenu>div .ui-icon").removeClass("ui-icon-triangle-1-s").addClass("ui-icon-triangle-1-e");
-            		 $("#ui-sMenu>div div").slideUp("fast");
-	            		 
-	                 _oT.removeClass("ui-state-default ui-corner-all").addClass("ui-state-active ui-corner-top");
-	                 _oTi.removeClass("ui-icon-triangle-1-e").addClass("ui-icon-triangle-1-s");
-	                 _oC.slideDown("fast");
-	             } else {
-	                 _oT.removeClass("ui-state-active ui-corner-top").addClass("ui-state-default ui-corner-all");
-	                 _oTi.removeClass("ui-icon-triangle-1-s").addClass("ui-icon-triangle-1-e");
-	                 _oC.slideUp("fast");
-	             }
-	         });
-	     });
-	 });
-</script>--%>
+
 </head>
 <body>
 <div class="Notice">
@@ -153,7 +128,7 @@
 			<div id="" class="not-warp-in">
 				<div class="fsize12 f-fM p-txt" id="scroll_begin">
 					<tt class="fsize14 f-fM vam">【温馨提示】</tt>
-					<tt class="fsize14 f-fM vam">开源版本切勿商用哦！别辜负了我们善良的初衷，不然因酷小伙伴可是要暴躁的哟。更多功能欢迎购买商业版。</tt>
+					<tt class="fsize14 f-fM vam">这是我们的一个开发版本，如有BUG敬请原谅哟</tt>
 				</div>
 				<div class="fsize12 f-fM p-txt" id="scroll_end"></div>
 			</div>
@@ -173,9 +148,10 @@
 				<div id="top">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="http://demo1.inxedu.com/" target="_blank" title="因酷在线教育软件 - 在线教育整体解决方案提供商" class="tooltip">
+						<!--a href="http://demo1.inxedu.com/" target="_blank" title="因酷在线教育软件 - 在线教育整体解决方案提供商" class="tooltip">
 							<img src="${ctx}/static/admin/assets/logo.png" height="60" alt="因酷在线教育软件 - 在线教育整体解决方案提供商" />
 						</a>
+						-->
 					</div>
 					<!-- End of Logo -->
 
@@ -192,7 +168,7 @@
 
 					<!-- Meta information -->
 					<div class="meta">
-						<p>欢迎来到${websitemap.web.company}后台管理系统!</p>
+						<p>欢迎来到卓越教育后台管理系统!</p>
 						<ul>
 							<li>
 								<a href="${ctx}/admin/outlogin" title="退出系统" class="tooltip">
