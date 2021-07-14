@@ -13480,7 +13480,7 @@ VALUES
 		),(
 		3,
 		'logo',
-		'{\"url\":\"/images/upload/websiteLogo/20150820/1440035056371.png\"}',
+		'{\"url\":\"/images/upload/websiteLogo/20150820/logo.png\"}',
 		'logo' 
 		),(
 		4,
