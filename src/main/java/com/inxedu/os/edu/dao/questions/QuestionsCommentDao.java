@@ -7,12 +7,14 @@ import java.util.List;
 
 /**
  * QuestionsComment管理接口
+ *
  * @author www.inxedu.com
  */
 public interface QuestionsCommentDao {
 
     /**
      * 添加QuestionsComment
+     *
      * @param questionsComment 要添加的QuestionsComment
      * @return id
      */
@@ -24,7 +26,7 @@ public interface QuestionsCommentDao {
      * @param id 要删除的id
      */
     public Long deleteQuestionsCommentById(Long id);
-    
+
     /**
      * 根据id查询QuestionsComment
      *
@@ -49,22 +51,23 @@ public interface QuestionsCommentDao {
 
     /**
      * 通过问答id 查询该问答下的回复
+     *
      * @return List<QuestionsComment>
      */
     public List<QuestionsComment> queryQuestionsCommentListByQuestionsId(QuestionsComment questionsComment, PageEntity page);
-    
+
     /**
      * 根据问答id删除QuestionsComment
      *
      * @param id 要删除的id
      */
     public Long delQuestionsCommentByQuestionId(Long id);
-    
+
     /**
      * 查询所有的问答
      */
     public List<QuestionsComment> queryQuestionsCommentList(QuestionsComment questionsComment, PageEntity page);
-    
+
     /**
      * 根据问答回复id删除QuestionsComment
      */

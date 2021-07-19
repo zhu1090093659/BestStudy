@@ -1,13 +1,12 @@
 package com.inxedu.os.edu.dao.website;
 
 
-import java.util.List;
-
 import com.inxedu.os.edu.entity.website.WebsiteCourse;
+
+import java.util.List;
 
 /**
  * WebsiteCourse管理接口
- * @author www.inxedu.com
  */
 public interface WebsiteCourseDao {
 
@@ -20,10 +19,12 @@ public interface WebsiteCourseDao {
      * 查询推荐课程分类
      */
     public WebsiteCourse queryWebsiteCourseById(int id);
+
     /**
      * 修改推荐课程分类
      */
     public void updateWebsiteCourseById(WebsiteCourse websiteCourse);
+
     /**
      * 添加推荐课程分类
      */

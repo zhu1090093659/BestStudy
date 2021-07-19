@@ -11,47 +11,47 @@ import java.util.List;
 
 /**
  * 缓存管理
- * @author www.inxedu.com
  *
+ * @author www.inxedu.com
  */
 @Service("websiteEhcacheService")
 public class WebsiteEhcacheServiceImpl implements WebsiteEhcacheService {
-	
-	@Autowired
-	private WebsiteEhcacheDao websiteEhcacheDao;
 
-	@Override
-	public void addWebsiteEhcache(WebsiteEhcache websiteEhcache) {
-		websiteEhcacheDao.addWebsiteEhcache(websiteEhcache);
-	}
-	
-	@Override
-	public List<WebsiteEhcache> queryWebsiteEhcacheList(WebsiteEhcache websiteEhcache, PageEntity page) {
-		return websiteEhcacheDao.queryWebsiteEhcacheList(websiteEhcache, page);
-	}
+    @Autowired
+    private WebsiteEhcacheDao websiteEhcacheDao;
 
-	@Override
-	public Long delWebsiteEhcache(Long id) {
-		return websiteEhcacheDao.delWebsiteEhcache(id);
-	}
+    @Override
+    public void addWebsiteEhcache(WebsiteEhcache websiteEhcache) {
+        websiteEhcacheDao.addWebsiteEhcache(websiteEhcache);
+    }
 
-	@Override
-	public WebsiteEhcache getWebsiteEhcacheById(Long id) {
-		return websiteEhcacheDao.getWebsiteEhcacheById(id);
-	}
+    @Override
+    public List<WebsiteEhcache> queryWebsiteEhcacheList(WebsiteEhcache websiteEhcache, PageEntity page) {
+        return websiteEhcacheDao.queryWebsiteEhcacheList(websiteEhcache, page);
+    }
 
-	@Override
-	public boolean queryWebsiteEhcacheIsExsit(String key) {
-		if(websiteEhcacheDao.queryWebsiteEhcacheIsExsit(key)>0){
-			return true;
-		}else{
-			return false;
-		}
-	}
+    @Override
+    public Long delWebsiteEhcache(Long id) {
+        return websiteEhcacheDao.delWebsiteEhcache(id);
+    }
 
-	@Override
-	public Long updateWebsiteEhcache(WebsiteEhcache websiteEhcache) {
-		return websiteEhcacheDao.updateWebsiteEhcache(websiteEhcache);
-	}
+    @Override
+    public WebsiteEhcache getWebsiteEhcacheById(Long id) {
+        return websiteEhcacheDao.getWebsiteEhcacheById(id);
+    }
+
+    @Override
+    public boolean queryWebsiteEhcacheIsExsit(String key) {
+        if (websiteEhcacheDao.queryWebsiteEhcacheIsExsit(key) > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public Long updateWebsiteEhcache(WebsiteEhcache websiteEhcache) {
+        return websiteEhcacheDao.updateWebsiteEhcache(websiteEhcache);
+    }
 
 }

@@ -8,20 +8,21 @@ import java.util.Date;
 
 /**
  * 用户短信消息
- * @ClassName  com.inxedu.os.edu.entity.user.UserMobileMsg
- * @description
+ *
  * @author : XuJunBao
+ * @ClassName com.inxedu.os.edu.entity.user.UserMobileMsg
+ * @description
  * @Create Date : 2014年9月21日 下午9:19:01
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class UserMobileMsg implements Serializable{
+@EqualsAndHashCode(callSuper = false)
+public class UserMobileMsg implements Serializable {
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 1791597934814803374L;
-    
+
     private int id;//主键
     private Long userId;//用户id
     private String mobile;//手机号

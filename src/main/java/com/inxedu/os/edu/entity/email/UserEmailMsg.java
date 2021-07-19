@@ -8,17 +8,18 @@ import java.util.Date;
 
 /**
  * 用户邮件消息
+ *
  * @author www.inxedu.com
  */
 @Data
-@EqualsAndHashCode(callSuper=false)
-public class UserEmailMsg implements Serializable{
+@EqualsAndHashCode(callSuper = false)
+public class UserEmailMsg implements Serializable {
 
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 1791597934814803374L;
-    
+
     private int id;//主键
     private Long userId;//用户id
     private String email;//邮箱

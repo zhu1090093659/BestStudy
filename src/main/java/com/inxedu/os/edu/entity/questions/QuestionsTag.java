@@ -1,14 +1,15 @@
 package com.inxedu.os.edu.entity.questions;
 
-import java.io.Serializable;
-import java.util.Date;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  * 问答标签
- *@author www.inxedu.com
+ *
+ * @author www.inxedu.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

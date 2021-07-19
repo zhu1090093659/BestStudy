@@ -1,16 +1,15 @@
 package com.inxedu.os.edu.dao.letter;
 
+import com.inxedu.os.common.entity.PageEntity;
+import com.inxedu.os.edu.entity.letter.MsgSystem;
+
 import java.util.Date;
 import java.util.List;
 
-import com.inxedu.os.common.entity.PageEntity;
-
-import com.inxedu.os.edu.entity.letter.MsgSystem;
-
 
 /**
- * @description 站内信发件箱的Dao
  * @author www.inxedu.com
+ * @description 站内信发件箱的Dao
  */
 public interface MsgSystemDao {
     /**

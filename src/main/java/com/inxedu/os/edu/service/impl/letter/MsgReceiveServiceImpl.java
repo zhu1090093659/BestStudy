@@ -1,18 +1,5 @@
 package com.inxedu.os.edu.service.impl.letter;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.inxedu.os.common.cache.EHCacheUtil;
-import com.inxedu.os.common.constants.CacheConstans;
 import com.inxedu.os.common.entity.PageEntity;
 import com.inxedu.os.common.util.ObjectUtils;
 import com.inxedu.os.edu.dao.letter.MsgReceiveDao;
@@ -24,26 +11,30 @@ import com.inxedu.os.edu.entity.user.User;
 import com.inxedu.os.edu.service.letter.MsgReceiveService;
 import com.inxedu.os.edu.service.letter.MsgSystemService;
 import com.inxedu.os.edu.service.user.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.*;
 
 /**
- * @description 站内信的实现
  * @author www.inxedu.com
+ * @description 站内信的实现
  */
 @Service("msgReceiveService")
 public class MsgReceiveServiceImpl implements MsgReceiveService {
-	//logger
-	Logger logger = LoggerFactory.getLogger(MsgReceiveServiceImpl.class);
+    //logger
+    Logger logger = LoggerFactory.getLogger(MsgReceiveServiceImpl.class);
     @Autowired
     private MsgReceiveDao msgReceiveDao;
     @Autowired
     private UserService userService;
-    
+
     @Autowired
     private MsgSystemService msgSystemService;
 
-    
 
-    
     /**
      * 查询站内信收件箱
      *
@@ -53,8 +44,8 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
      * @throws Exception
      */
     public List<QueryMsgReceive> queryMsgReceiveByInbox(MsgReceive msgReceive, PageEntity page) throws Exception {
-    	//查询用户信息
-   	    User user  = userService.queryUserById((Integer.parseInt(msgReceive.getReceivingCusId().toString())));
+        //查询用户信息
+        User user = userService.queryUserById((Integer.parseInt(msgReceive.getReceivingCusId().toString())));
         Date lastTime = user.getLastSystemTime();
         //查询系统发送的未读消息（根据用户的最后登录时间）
         List<MsgSystem> MSlist = msgSystemService.queryMSListByLT(lastTime);
@@ -69,15 +60,15 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
                 msgReceive1.setStatus(LetterConstans.LETTER_STATUS_READ);
                 msgReceive1.setType(LetterConstans.LETTER_TYPE_SYSTEMINFORM);
                 msgReceive1.setUpdateTime(new Date());
-                msgReceive1.setShowname((user.getShowName()!=null&&!user.getShowName().equals(""))?user.getShowName():user.getEmail());
+                msgReceive1.setShowname((user.getShowName() != null && !user.getShowName().equals("")) ? user.getShowName() : user.getEmail());
                 msgReceive1.setCusId(0L);
                 msgrcList.add(msgReceive1);
             }
             //批量添加站内信
             this.addMsgReceiveBatch(msgrcList);
         }
-         
-         //查询站内信
+
+        //查询站内信
         List<QueryMsgReceive> queryMsgReceiveList = msgReceiveDao.queryMsgReceiveByInbox(msgReceive, page);
         // 更新所有收件箱为已读
         updateAllReadMsgReceiveInbox(msgReceive);
@@ -87,7 +78,6 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
         userService.updateCusForLST(msgReceive.getReceivingCusId(), new Date());
         return queryMsgReceiveList;
     }
-
 
 
     /**
@@ -125,9 +115,9 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
      * @throws Exception
      */
     public String addSystemMessageByCusId(String content, Long cusId) throws Exception {
-        
+
         User userExpandDto = userService.queryUserById(Integer.parseInt(cusId.toString()));
-        
+
         MsgReceive msgReceive = new MsgReceive();
         msgReceive.setContent(content);// 添加站内信的内容
         msgReceive.setCusId(Long.valueOf(0));
@@ -141,13 +131,13 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
         } else {// 如果为空则set 空字符串
             msgReceive.setShowname("");// 会员名
         }
-        try{
-        	msgReceiveDao.addMsgReceive(msgReceive);
-        	userService.updateUnReadMsgNumAddOne("sysMsgNum", cusId);
-        }catch(Exception e){
-        	logger.error("addSystemMessageByCusId---send message is error", e);
+        try {
+            msgReceiveDao.addMsgReceive(msgReceive);
+            userService.updateUnReadMsgNumAddOne("sysMsgNum", cusId);
+        } catch (Exception e) {
+            logger.error("addSystemMessageByCusId---send message is error", e);
         }
-        
+
         return "success";
     }
 
@@ -160,8 +150,8 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
      */
     public Map<String, String> queryUnReadMsgReceiveNumByCusId(Long cusId) throws Exception {
         @SuppressWarnings("unchecked")
-		Map<String,String> map =new HashMap<String,String>();
-        User userExpandDto=userService.queryUserById(Integer.parseInt(cusId.toString()));
+        Map<String, String> map = new HashMap<String, String>();
+        User userExpandDto = userService.queryUserById(Integer.parseInt(cusId.toString()));
         //未读系统自动消息数
         int smNum = userExpandDto.getSysMsgNum();
         //未读站内信数
@@ -177,7 +167,7 @@ public class MsgReceiveServiceImpl implements MsgReceiveService {
             map.put("unReadNum", mNum + MSlist.size() + smNum + "");
         } else {
             map.put("SMNum", smNum + "");
-            map.put("unReadNum", mNum +  smNum + "");
+            map.put("unReadNum", mNum + smNum + "");
         }
         return map;// 返回查好的数据
     }

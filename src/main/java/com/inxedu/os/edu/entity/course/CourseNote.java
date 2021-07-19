@@ -1,18 +1,16 @@
 package com.inxedu.os.edu.entity.course;
 
-import java.io.Serializable;
-
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-/**
- * @author www.inxedu.com
- *
- */
+import java.io.Serializable;
+
+
+
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class CourseNote implements Serializable{
-	private static final long serialVersionUID = 1L;
+public class CourseNote implements Serializable {
+    private static final long serialVersionUID = 1L;
     private Long id;//主键
     private Long kpointId;//节点ID
     private Long courseId;//课程id

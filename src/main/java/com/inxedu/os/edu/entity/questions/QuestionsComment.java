@@ -1,17 +1,19 @@
 package com.inxedu.os.edu.entity.questions;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import lombok.Data;
 /**
  * 问答评论
- *@author www.inxedu.com
+ *
+ * @author www.inxedu.com
  */
 @Data
 public class QuestionsComment implements Serializable {
-	private static final long serialVersionUID = 7687324559966427231L;
+    private static final long serialVersionUID = 7687324559966427231L;
     private Long id;// 主键自增
     private Long cusId;// 评论人id
     private Long questionId;// 问答id
@@ -21,7 +23,7 @@ public class QuestionsComment implements Serializable {
     private int praiseCount;// 点赞数
     private Date addTime;// 添加时间
     private Long commentId;//父级评论id
-    
+
     private int limitSize;//查询限制条数
     private String orderFlag;//排序值 new 最新
     private String showName;//用户名

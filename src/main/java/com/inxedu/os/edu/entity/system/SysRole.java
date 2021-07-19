@@ -10,10 +10,10 @@ import java.util.Date;
  * author www.inxedu.com
  */
 @Data
-public class SysRole implements Serializable{
-	
-	private static final long serialVersionUID = 1L;
-	private int roleId;
-	private String roleName;
-	private Date createTime;
+public class SysRole implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    private int roleId;
+    private String roleName;
+    private Date createTime;
 }

@@ -8,7 +8,6 @@ import java.util.Date;
 
 /**
  * @author www.inxedu.com
- *
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

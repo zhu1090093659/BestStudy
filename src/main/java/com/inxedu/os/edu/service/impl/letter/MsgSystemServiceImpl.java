@@ -14,8 +14,8 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @description 系统消息
  * @author www.inxedu.com
+ * @description 系统消息
  */
 @Service("msgSystemService")
 public class MsgSystemServiceImpl implements MsgSystemService {
@@ -31,6 +31,7 @@ public class MsgSystemServiceImpl implements MsgSystemService {
 
     /**
      * 查询系统消息
+     *
      * @param msgSystem
      * @throws Exception
      */
@@ -40,6 +41,7 @@ public class MsgSystemServiceImpl implements MsgSystemService {
 
     /**
      * 通过id删除系统消息
+     *
      * @return
      * @throws Exception
      */
@@ -49,6 +51,7 @@ public class MsgSystemServiceImpl implements MsgSystemService {
 
     /**
      * 查询大于传入的时间的系统系统消息
+     *
      * @throws Exception
      */
     public List<MsgSystem> queryMSListByLT(Date lastTime) throws Exception {
@@ -57,6 +60,7 @@ public class MsgSystemServiceImpl implements MsgSystemService {
 
     /**
      * 检查系统消息过期更新字段 删除过期的站内信
+     *
      * @throws Exception
      */
     public void updatePast() throws Exception {
@@ -71,5 +75,5 @@ public class MsgSystemServiceImpl implements MsgSystemService {
 
     }
 
-    
+
 }

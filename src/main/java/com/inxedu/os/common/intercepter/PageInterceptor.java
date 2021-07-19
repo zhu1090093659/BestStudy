@@ -20,40 +20,38 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Properties;
 
-@Intercepts({    @Signature(
+@Intercepts({@Signature(
         type = Executor.class,
         method = "query",
         args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class}
 )})
-/**
- * @author www.inxedu.com
- */
+
 public class PageInterceptor implements Interceptor {
     public PageInterceptor() {
     }
 
     public Object intercept(Invocation invocation) throws Throwable {
-        MappedStatement mappedStatement = (MappedStatement)invocation.getArgs()[0];
+        MappedStatement mappedStatement = (MappedStatement) invocation.getArgs()[0];
         Object parameter = invocation.getArgs()[1];
         BoundSql boundSql = mappedStatement.getBoundSql(parameter);
         String originalSql = boundSql.getSql().trim();
         Object parameterObject = boundSql.getParameterObject();
         Object obj = boundSql.getParameterObject();
-        if(obj instanceof Map) {
-            Map<String,Object> result = (Map<String,Object>)obj;
+        if (obj instanceof Map) {
+            Map<String, Object> result = (Map<String, Object>) obj;
             PageEntity page = null;
             for (Object arg : result.values()) {
                 if (arg instanceof PageEntity) {
-                	page = (PageEntity) arg;
+                    page = (PageEntity) arg;
                 }
             }
-           //String countfalg = (String)result.get("countfalg");
-            if(ObjectUtils.isNotNull(page)) {
-            	 if(ObjectUtils.isNull(result.get("pageEntity"))){
-               	  Object result1 = invocation.proceed();
-                     return result1;
-               }
-                page = (PageEntity)result.get("pageEntity");
+            //String countfalg = (String)result.get("countfalg");
+            if (ObjectUtils.isNotNull(page)) {
+                if (ObjectUtils.isNull(result.get("pageEntity"))) {
+                    Object result1 = invocation.proceed();
+                    return result1;
+                }
+                page = (PageEntity) result.get("pageEntity");
                 String countSql = this.getCountSql(originalSql);
                 Connection connection = mappedStatement.getConfiguration().getEnvironment().getDataSource().getConnection();
                 PreparedStatement countStmt = connection.prepareStatement(countSql);
@@ -62,7 +60,7 @@ public class PageInterceptor implements Interceptor {
                 parameterHandler.setParameters(countStmt);
                 ResultSet rs = countStmt.executeQuery();
                 int totpage = 0;
-                if(rs.next()) {
+                if (rs.next()) {
                     totpage = rs.getInt(1);
                 }
 
@@ -105,10 +103,10 @@ public class PageInterceptor implements Interceptor {
         BoundSql newBoundSql = new BoundSql(ms.getConfiguration(), sql, boundSql.getParameterMappings(), boundSql.getParameterObject());
         Iterator i$ = boundSql.getParameterMappings().iterator();
 
-        while(i$.hasNext()) {
-            ParameterMapping mapping = (ParameterMapping)i$.next();
+        while (i$.hasNext()) {
+            ParameterMapping mapping = (ParameterMapping) i$.next();
             String prop = mapping.getProperty();
-            if(boundSql.hasAdditionalParameter(prop)) {
+            if (boundSql.hasAdditionalParameter(prop)) {
                 newBoundSql.setAdditionalParameter(prop, boundSql.getAdditionalParameter(prop));
             }
         }

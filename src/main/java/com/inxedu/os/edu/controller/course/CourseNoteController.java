@@ -18,16 +18,16 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  * CourseNote 课程笔记 Controller
- * @author www.inxedu.com
  */
 @Controller
-public class CourseNoteController extends BaseController{
+public class CourseNoteController extends BaseController {
 
     private static final Logger logger = LoggerFactory.getLogger(CourseNoteController.class);
 
- 	@Autowired
+    @Autowired
     private CourseNoteService courseNoteService;
 
     /**
@@ -41,18 +41,19 @@ public class CourseNoteController extends BaseController{
         try {
             //通过节点id和用户id查询笔记
             CourseNote courseNote = courseNoteService.getCourseNoteByKpointIdAndUserId(kpointId, Long.valueOf(SingletonLoginUtils.getLoginUserId(request)));
-            request.setAttribute("courseNote",courseNote);
+            request.setAttribute("courseNote", courseNote);
             String uuid = StringUtils.createUUID().replace("-", "");
-            request.setAttribute("uuid",uuid);
+            request.setAttribute("uuid", uuid);
         } catch (Exception e) {
             logger.error("CourseNoteController.querynote()", e);
             return setExceptionRequest(request, e);
         }
         return getViewPath("/web/ucenter/query_note");
     }
+
     /**
      * 添加笔记
-     * 
+     *
      * @return
      */
     @RequestMapping("/courseNote/ajax/addnote")

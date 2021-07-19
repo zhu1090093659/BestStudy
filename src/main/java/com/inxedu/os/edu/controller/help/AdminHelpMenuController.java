@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * AdminHelpMenuController帮助中心
- * @author http://www.inxedu.com
  */
 @Controller
 @RequestMapping("/admin")
@@ -42,6 +41,7 @@ public class AdminHelpMenuController extends BaseController {
 
     /**
      * 菜单表
+     *
      * @param request
      * @return
      */
@@ -61,6 +61,7 @@ public class AdminHelpMenuController extends BaseController {
 
     /**
      * 跳转添加菜单
+     *
      * @return
      */
     @RequestMapping("/helpMenu/doadd")

@@ -11,21 +11,21 @@ import java.util.List;
 
 /**
  * 学员登录日志
- * @author www.inxedu.com
  *
+ * @author www.inxedu.com
  */
 @Service("userLoginLogService")
-public class UserLoginLogServiceImpl implements UserLoginLogService{
+public class UserLoginLogServiceImpl implements UserLoginLogService {
 
-	@Autowired
-	private UserLoginLogDao userLoginLogDao;
-	
-	public int createLoginLog(UserLoginLog loginLog) {
-		return userLoginLogDao.createLoginLog(loginLog);
-	}
-	
-	public List<UserLoginLog> queryUserLogPage(int userId, PageEntity page) {
-		return userLoginLogDao.queryUserLogPage(userId, page);
-	}
+    @Autowired
+    private UserLoginLogDao userLoginLogDao;
+
+    public int createLoginLog(UserLoginLog loginLog) {
+        return userLoginLogDao.createLoginLog(loginLog);
+    }
+
+    public List<UserLoginLog> queryUserLogPage(int userId, PageEntity page) {
+        return userLoginLogDao.queryUserLogPage(userId, page);
+    }
 
 }

@@ -20,52 +20,49 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2016/9/23.
- */
+
 @Controller
 @RequestMapping("/webapp")
 public class CourseMsgController extends BaseController {
-    private static Logger logger=Logger.getLogger(CourseMsgController.class);
+    private static Logger logger = Logger.getLogger(CourseMsgController.class);
 
     @Autowired
     private CourseService courseService;
 
-   /* 返回首页的课程信息*/
+    /* 返回首页的课程信息*/
     @RequestMapping("/courseList")
     @ResponseBody
-    public Map<String, Object> getTeacherList(HttpServletRequest request, @ModelAttribute("page") PageEntity page, int num){
-        Map<String, Object> json=new HashMap<String, Object>();
+    public Map<String, Object> getTeacherList(HttpServletRequest request, @ModelAttribute("page") PageEntity page, int num) {
+        Map<String, Object> json = new HashMap<String, Object>();
         try {
-            Map<String,List<CourseDto>> courses = new HashedMap();
-            Map<Integer,String> map = new HashMap<>();
+            Map<String, List<CourseDto>> courses = new HashedMap();
+            Map<Integer, String> map = new HashMap<>();
             courses = courseService.queryRecommenCourseList();
             List cutCourses = new ArrayList();
             cutCourses = courses.get("recommen_2");
 
-            if(ObjectUtils.isNotNull(cutCourses)){
-                for (int i=0;cutCourses.size()>num;i++){
-                    cutCourses.remove(cutCourses.size()-1);
+            if (ObjectUtils.isNotNull(cutCourses)) {
+                for (int i = 0; cutCourses.size() > num; i++) {
+                    cutCourses.remove(cutCourses.size() - 1);
                 }
-                json = this.setJson(true,"",cutCourses);
+                json = this.setJson(true, "", cutCourses);
+            } else {
+                json = this.setJson(true, "", null);
             }
-            else{
-                json = this.setJson(true,"",null);
-            }
 
 
-
-        }catch (Exception e){
+        } catch (Exception e) {
             json = this.setJson(false, "异常", null);
-            logger.error("getTeacherList()--error",e);
+            logger.error("getTeacherList()--error", e);
         }
         return json;
     }
+
     // 首页精品课程、最新课程、全部课程
     @RequestMapping("/typeCourse")
     @ResponseBody
     public Map<String, Object> querytypeCourse(HttpServletRequest request, String order) {
-        Map<String, Object> json=new HashMap<String, Object>();
+        Map<String, Object> json = new HashMap<String, Object>();
         try {
             if (order != null && !order.equals("")) {
                 QueryCourse queryCourse = new QueryCourse();
@@ -76,11 +73,11 @@ public class CourseMsgController extends BaseController {
                 queryCourse.setQueryLimit(8);
                 // 获得精品课程、最新课程、全部课程
                 List<CourseDto> courseDtoBNAList = courseService.queryCourse(queryCourse);
-                json = this.setJson(true,"",courseDtoBNAList);
+                json = this.setJson(true, "", courseDtoBNAList);
             }
         } catch (Exception e) {
             json = this.setJson(false, "异常", null);
-            logger.error("querytypeCourse()--error",e);
+            logger.error("querytypeCourse()--error", e);
         }
         return json;
     }

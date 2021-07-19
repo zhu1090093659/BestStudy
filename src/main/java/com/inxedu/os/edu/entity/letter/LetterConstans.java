@@ -2,7 +2,6 @@ package com.inxedu.os.edu.entity.letter;
 
 /**
  * 站内信
- * @author www.inxedu.com
  *
  */
 public class LetterConstans {

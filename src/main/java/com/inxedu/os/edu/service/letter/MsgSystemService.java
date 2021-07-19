@@ -8,10 +8,10 @@ import java.util.List;
 
 /**
  * @author : xiaokun
+ * @author www.inxedu.com
  * @ClassName com.inxedu.os.sns.service.letter.MsgSenderService
  * @description 站内信的发件箱service
  * @Create Date : 2014-1-26 下午1:53:44
- * @author www.inxedu.com
  */
 public interface MsgSystemService {
 
@@ -44,6 +44,7 @@ public interface MsgSystemService {
 
     /**
      * 查询大于传入的时间的系统系统消息
+     *
      * @return
      * @throws Exception
      */
@@ -51,6 +52,7 @@ public interface MsgSystemService {
 
     /**
      * 检查系统消息过期更新字段 删除过期的站内信
+     *
      * @return
      * @throws Exception
      */

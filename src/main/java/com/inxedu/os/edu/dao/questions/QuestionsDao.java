@@ -1,12 +1,13 @@
 package com.inxedu.os.edu.dao.questions;
 
+import com.inxedu.os.common.entity.PageEntity;
+import com.inxedu.os.edu.entity.questions.Questions;
+
 import java.util.List;
 
-import com.inxedu.os.common.entity.PageEntity;
-
-import com.inxedu.os.edu.entity.questions.Questions;
 /**
  * questions管理接口
+ *
  * @author www.inxedu.com
  */
 public interface QuestionsDao {
@@ -45,7 +46,7 @@ public interface QuestionsDao {
      * 根据条件获取Questions列表
      *
      * @param questions 查询条件
-     * @param page       分页参数
+     * @param page      分页参数
      * @return List<Questions>
      */
     public List<Questions> getQuestionsList(Questions questions, PageEntity page);
@@ -57,9 +58,10 @@ public interface QuestionsDao {
      * @return List<Questions>
      */
     public List<Questions> queryQuestionsOrder(int size);
-    
+
     /**
      * 所有问答数
+     *
      * @return
      */
     public int queryAllQuestionsCount();

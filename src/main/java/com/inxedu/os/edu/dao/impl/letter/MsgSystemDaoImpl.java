@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @description 站内信发件箱的Dao 实现
  * @author www.inxedu.com
+ * @description 站内信发件箱的Dao 实现
  */
 @Repository("MsgSystemDao")
 public class MsgSystemDaoImpl extends GenericDaoImpl implements MsgSystemDao {
@@ -44,6 +44,7 @@ public class MsgSystemDaoImpl extends GenericDaoImpl implements MsgSystemDao {
 
     /**
      * 查询大于传入的时间的系统系统消息
+     *
      * @param lastTime
      * @return
      * @throws Exception

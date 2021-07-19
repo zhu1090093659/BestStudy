@@ -11,20 +11,21 @@ import java.util.List;
 
 /**
  * 后台用户登录日志
+ *
  * @author www.inxedu.com
  */
 @Service("sysUserLoginLogService")
-public class SysUserLoginLogServiceImpl implements SysUserLoginLogService{
+public class SysUserLoginLogServiceImpl implements SysUserLoginLogService {
 
-	@Autowired
-	private SysUserLoginLogDao sysUserLoginLogDao;
-	
-	public int createLoginLog(SysUserLoginLog loginLog) {
-		return sysUserLoginLogDao.createLoginLog(loginLog);
-	}
-	
-	public List<SysUserLoginLog> queryUserLogPage(int userId, PageEntity page) {
-		return sysUserLoginLogDao.queryUserLogPage(userId, page);
-	}
+    @Autowired
+    private SysUserLoginLogDao sysUserLoginLogDao;
+
+    public int createLoginLog(SysUserLoginLog loginLog) {
+        return sysUserLoginLogDao.createLoginLog(loginLog);
+    }
+
+    public List<SysUserLoginLog> queryUserLogPage(int userId, PageEntity page) {
+        return sysUserLoginLogDao.queryUserLogPage(userId, page);
+    }
 
 }

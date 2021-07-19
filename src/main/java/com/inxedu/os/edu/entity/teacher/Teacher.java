@@ -7,13 +7,14 @@ import java.io.Serializable;
 
 /**
  * 讲师实体
+ *
  * @author www.inxedu.com
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Teacher implements Serializable {
     /**
-     * 
+     *
      */
     private static final long serialVersionUID = 838162101564081713L;
     private int id;// 主键自增

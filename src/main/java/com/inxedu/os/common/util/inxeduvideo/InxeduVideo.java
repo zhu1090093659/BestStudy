@@ -9,30 +9,29 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 public class InxeduVideo {
-	  
-    private static final String MAC_NAME = "HmacSHA1";    
-    private static final String ENCODING = "UTF-8";    
-      
-    public static byte[] HmacSHA1Encrypt(String encryptText, String encryptKey) throws Exception
-    {           
-        byte[] data=encryptKey.getBytes();  
+
+    private static final String MAC_NAME = "HmacSHA1";
+    private static final String ENCODING = "UTF-8";
+
+    public static byte[] HmacSHA1Encrypt(String encryptText, String encryptKey) throws Exception {
+        byte[] data = encryptKey.getBytes();
         SecretKey secretKey = new SecretKeySpec(data, MAC_NAME);
         Mac mac = Mac.getInstance(MAC_NAME);
         mac.init(secretKey);
-          
-        byte[] text = encryptText.getBytes();    
+
+        byte[] text = encryptText.getBytes();
         return mac.doFinal(text);
     }
 
-    public static String createPlayToken(String fid,String SecretKey,String AccessKey) {
+    public static String createPlayToken(String fid, String SecretKey, String AccessKey) {
         if (fid == null || fid.length() == 0) {
             return "";
         }
-        long deadline = System.currentTimeMillis()/1000 + 3600;
+        long deadline = System.currentTimeMillis() / 1000 + 3600;
         String token = "id=" + fid + "&deadline=" + deadline + "&enablehtml5=1";
         String encoded = new BASE64Encoder().encode(token.getBytes());
         encoded = encoded.replaceAll("\r|\n", "");
-        String encodeSign ="";
+        String encodeSign = "";
         byte[] sign = null;
         try {
             sign = HmacSHA1Encrypt(encoded, SecretKey);

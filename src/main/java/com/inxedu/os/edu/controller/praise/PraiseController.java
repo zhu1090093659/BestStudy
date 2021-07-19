@@ -20,50 +20,49 @@ import java.util.Map;
 
 /**
  * 点赞controller
- * @author www.inxedu.com
  */
 @Controller
 public class PraiseController extends BaseController {
-	private static final org.slf4j.Logger logger = LoggerFactory.getLogger(PraiseController.class);
-	
-	@Autowired
-	private PraiseService praiseService;
+    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(PraiseController.class);
 
-	@InitBinder({"praise"})
-	public void initBinderPraise(WebDataBinder binder){
-		binder.setFieldDefaultPrefix("praise.");
-	}
-	
-	/**
-	 * 添加点赞记录
-	 */
-	@RequestMapping("/praise/ajax/add")
-	@ResponseBody
-	public Object addPraise(HttpServletRequest request,@ModelAttribute("praise")Praise praise){
-		Map<String,Object> json = new HashMap<String,Object>();
-		try{
-			int userId = SingletonLoginUtils.getLoginUserId(request);
-			if (userId==0) {
-				json = this.setJson(false, "请先登录", "");
-				return json;
-			}
-			//查询是否点赞 过
-			praise.setUserId(Long.valueOf(userId));
-			int praiseCount=praiseService.queryPraiseCount(praise);
-			if(praiseCount>0){
-				json = this.setJson(false, "您已赞过", "");
-				return json;
-			}
-			
-			//添加点赞记录
-			praise.setAddTime(new Date());
-			praiseService.addPraise(praise);//在service 中    根据点赞目标 type 修改相应的 点赞总数
+    @Autowired
+    private PraiseService praiseService;
 
-			json = this.setJson(true, "", "");
-		}catch (Exception e) {
-			logger.error("PraiseController.addPraise()---error",e);
-			json = this.setJson(false, "系统错误,请稍后重试", "");
-		}
-		return json;
-	}
+    @InitBinder({"praise"})
+    public void initBinderPraise(WebDataBinder binder) {
+        binder.setFieldDefaultPrefix("praise.");
+    }
+
+    /**
+     * 添加点赞记录
+     */
+    @RequestMapping("/praise/ajax/add")
+    @ResponseBody
+    public Object addPraise(HttpServletRequest request, @ModelAttribute("praise") Praise praise) {
+        Map<String, Object> json = new HashMap<String, Object>();
+        try {
+            int userId = SingletonLoginUtils.getLoginUserId(request);
+            if (userId == 0) {
+                json = this.setJson(false, "请先登录", "");
+                return json;
+            }
+            //查询是否点赞 过
+            praise.setUserId(Long.valueOf(userId));
+            int praiseCount = praiseService.queryPraiseCount(praise);
+            if (praiseCount > 0) {
+                json = this.setJson(false, "您已赞过", "");
+                return json;
+            }
+
+            //添加点赞记录
+            praise.setAddTime(new Date());
+            praiseService.addPraise(praise);//在service 中    根据点赞目标 type 修改相应的 点赞总数
+
+            json = this.setJson(true, "", "");
+        } catch (Exception e) {
+            logger.error("PraiseController.addPraise()---error", e);
+            json = this.setJson(false, "系统错误,请稍后重试", "");
+        }
+        return json;
+    }
 }
