@@ -26,7 +26,6 @@ import java.util.Map;
 
 /**
  * 前台文章资讯
- * @author www.inxedu.com
  */
 @Controller
 @RequestMapping("/front")

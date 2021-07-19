@@ -31,7 +31,6 @@ import java.util.Map;
 
 /**
  * 后台课程管理
- * @author www.inxedu.com
  */
 @Controller
 @RequestMapping("/admin")

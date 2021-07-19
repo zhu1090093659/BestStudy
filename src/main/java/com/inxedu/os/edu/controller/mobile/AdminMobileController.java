@@ -26,10 +26,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author www.inxedu.com
- *
- */
 @Controller
 @RequestMapping("/admin")
 public class AdminMobileController extends BaseController {

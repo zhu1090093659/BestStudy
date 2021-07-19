@@ -21,7 +21,6 @@ import java.util.Map;
 
 /**
  * 前台评论模块
- * @author www.inxedu.com
  */
 @Controller
 @RequestMapping("/web/comment")

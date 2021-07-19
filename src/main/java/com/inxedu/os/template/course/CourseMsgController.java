@@ -20,9 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Created by Administrator on 2016/9/23.
- */
+
 @Controller
 @RequestMapping("/webapp")
 public class CourseMsgController extends BaseController {
