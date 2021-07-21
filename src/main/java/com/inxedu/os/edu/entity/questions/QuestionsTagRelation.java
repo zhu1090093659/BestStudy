@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 问答和 问答标签的 关联表
  *
- * @author www.inxedu.com
+
  */
 @Data
 public class QuestionsTagRelation implements Serializable {

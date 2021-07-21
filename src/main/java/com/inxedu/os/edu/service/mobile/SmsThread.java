@@ -2,7 +2,7 @@ package com.inxedu.os.edu.service.mobile;
 
 
 /**
- * @author www.inxedu.com
+ 
  */
 public class SmsThread extends Thread {
     private final SmsServiceStub sendSms;

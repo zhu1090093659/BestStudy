@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * Teacher管理接口
  *
- * @author www.inxedu.com
+ 
  */
 @Service("teacherService")
 public class TeacherServiceImpl implements TeacherService {

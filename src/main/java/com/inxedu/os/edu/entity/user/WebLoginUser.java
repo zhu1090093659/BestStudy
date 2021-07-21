@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 外部登录用户信息
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

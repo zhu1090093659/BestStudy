@@ -8,8 +8,7 @@ import java.util.Map;
 
 /**
  * 评论dao层接口
- *
- * @author www.inxedu.com
+
  */
 public interface CommentDao {
     /**

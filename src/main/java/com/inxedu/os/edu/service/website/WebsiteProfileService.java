@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * service
  *
- * @author www.inxedu.com
+ 
  */
 public interface WebsiteProfileService {
     /**

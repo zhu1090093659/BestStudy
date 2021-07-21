@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * @author www.inxedu.com
+ 
  * @ClassName com.inxedu.os.inxedu.entity.course.CourseStudyhistory
  * @description 记录播放记录
  */

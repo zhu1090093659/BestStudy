@@ -11,8 +11,6 @@ import java.util.Map;
 
 /**
  * Subject对象操作实现类
- *
- * @author www.inxedu.com
  */
 @Repository("subjectDao")
 public class SubjectDaoImpl extends GenericDaoImpl implements SubjectDao {

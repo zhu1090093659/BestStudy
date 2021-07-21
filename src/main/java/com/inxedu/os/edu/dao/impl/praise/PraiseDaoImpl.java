@@ -5,9 +5,7 @@ import com.inxedu.os.edu.dao.praise.PraiseDao;
 import com.inxedu.os.edu.entity.praise.Praise;
 import org.springframework.stereotype.Repository;
 
-/**
- * @author www.inxedu.com
- */
+
 @Repository("praiseDao")
 public class PraiseDaoImpl extends GenericDaoImpl implements PraiseDao {
 

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 网站配置
  *
- * @author www.inxedu.com
+
  */
 @Repository("websiteProfileDao")
 public class WebsiteProfileDaoImpl extends GenericDaoImpl implements WebsiteProfileDao {

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 后台用户 查询辅助类
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class QuerySysUser implements Serializable {

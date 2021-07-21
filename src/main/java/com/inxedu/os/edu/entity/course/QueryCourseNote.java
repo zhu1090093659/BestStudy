@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 import java.io.Serializable;
 
 /**
- * @author www.inxedu.com
+ 
  * @ClassName com.inxedu.os.edu.entity.course.QueryCourseNote
  * @description
  */

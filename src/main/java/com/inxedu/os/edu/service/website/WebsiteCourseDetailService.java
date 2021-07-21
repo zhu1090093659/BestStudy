@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 课程推荐关联接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface WebsiteCourseDetailService {
     /**

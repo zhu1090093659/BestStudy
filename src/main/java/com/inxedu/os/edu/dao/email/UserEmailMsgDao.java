@@ -7,8 +7,7 @@ import java.util.List;
 
 
 /**
- * @author http://www.inxedu.com
- */
+ * */
 public interface UserEmailMsgDao {
     /**
      * 查询记录

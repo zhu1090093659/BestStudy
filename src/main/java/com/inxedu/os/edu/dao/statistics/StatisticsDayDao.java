@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * StatisticsDay管理接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface StatisticsDayDao {
 

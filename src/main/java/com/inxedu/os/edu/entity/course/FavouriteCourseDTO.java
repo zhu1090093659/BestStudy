@@ -8,9 +8,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author www.inxedu.com
- */
+
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class FavouriteCourseDTO implements Serializable {

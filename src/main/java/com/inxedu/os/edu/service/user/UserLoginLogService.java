@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 前台学员登录日志
  *
- * @author www.inxedu.com
+ 
  */
 public interface UserLoginLogService {
     /**

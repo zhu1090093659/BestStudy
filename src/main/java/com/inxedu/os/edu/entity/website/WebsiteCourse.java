@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * 推荐分类
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

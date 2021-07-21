@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * questions服务接口 实现
  *
- * @author www.inxedu.com
+ 
  */
 @Service("questionsService")
 public class QuestionsServiceImpl implements QuestionsService {

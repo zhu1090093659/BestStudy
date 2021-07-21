@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * QuestionsTag对象操作实现类
  *
- * @author www.inxedu.com
+ 
  */
 @Repository("questionsTagDao")
 public class QuestionsTagDaoImpl extends GenericDaoImpl implements QuestionsTagDao {

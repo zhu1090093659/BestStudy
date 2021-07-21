@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 缓存管理
  *
- * @author www.inxedu.com
+ 
  */
 @Repository("websiteEhcacheDao")
 public class WebsiteEhcacheDaoImpl extends GenericDaoImpl implements WebsiteEhcacheDao {

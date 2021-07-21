@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 /**
  * CourseTeacher管理接口
  *
- * @author www.inxedu.com
+ 
  */
 @Service("courseTeacherService")
 public class CourseTeacherServiceImpl implements CourseTeacherService {

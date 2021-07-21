@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 推荐课程关联Dao层
  *
- * @author www.inxedu.com
+ 
  */
 public interface WebsiteCourseDetailDao {
     /**

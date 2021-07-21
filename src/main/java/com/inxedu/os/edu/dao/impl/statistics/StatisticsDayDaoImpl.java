@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * StatisticsDay
  *
- * @author www.inxedu.com
+ 
  */
 @Repository("statisticsDayDao")
 public class StatisticsDayDaoImpl extends GenericDaoImpl implements StatisticsDayDao {

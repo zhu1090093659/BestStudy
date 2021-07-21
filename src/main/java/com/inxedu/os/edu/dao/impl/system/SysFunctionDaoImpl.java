@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * 后台系统权限
  *
- * @author www.inxedu.com
+
  */
 @Repository("sysFunctionDao")
 public class SysFunctionDaoImpl extends GenericDaoImpl implements SysFunctionDao {

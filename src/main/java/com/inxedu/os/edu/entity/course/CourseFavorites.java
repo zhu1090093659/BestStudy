@@ -6,9 +6,7 @@ import lombok.EqualsAndHashCode;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @author www.inxedu.com
- */
+
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class CourseFavorites implements Serializable {

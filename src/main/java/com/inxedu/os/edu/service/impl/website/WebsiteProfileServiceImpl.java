@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * 网站管理配置service
  *
- * @author www.inxedu.com
+ 
  */
 @Service("websiteProfileService")
 public class WebsiteProfileServiceImpl implements WebsiteProfileService {

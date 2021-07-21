@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author http://www.inxedu.com
- */
+ * */
 public interface UserEmailMsgService {
     /**
      * 查询记录

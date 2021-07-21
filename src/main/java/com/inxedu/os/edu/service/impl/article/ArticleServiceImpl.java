@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author www.inxedu.com
+ 
  */
 @Service("articleService")
 public class ArticleServiceImpl implements ArticleService {

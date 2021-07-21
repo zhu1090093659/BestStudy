@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * 缓存管理
  *
- * @author www.inxedu.com
+
  */
 @Service("websiteEhcacheService")
 public class WebsiteEhcacheServiceImpl implements WebsiteEhcacheService {

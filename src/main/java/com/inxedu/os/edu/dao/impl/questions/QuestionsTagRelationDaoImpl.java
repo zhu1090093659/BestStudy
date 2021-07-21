@@ -9,8 +9,7 @@ import java.util.List;
 
 /**
  * 问答和 问答标签的 关联表 实现类
- *
- * @author www.inxedu.com
+
  */
 @Repository("questionsTagRelationDao")
 public class QuestionsTagRelationDaoImpl extends GenericDaoImpl implements QuestionsTagRelationDao {

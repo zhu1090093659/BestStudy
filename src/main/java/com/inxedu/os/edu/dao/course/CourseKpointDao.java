@@ -9,8 +9,6 @@ import java.util.Map;
 
 /**
  * CourseKpoint管理接口
- *
- * @author www.inxedu.com
  */
 public interface CourseKpointDao {
     /**

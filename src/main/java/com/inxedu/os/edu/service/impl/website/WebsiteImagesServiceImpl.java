@@ -18,7 +18,7 @@ import java.util.Map;
 /**
  * 广告图service 实现
  *
- * @author www.inxedu.com
+ 
  */
 @Service("websiteImagesService")
 public class WebsiteImagesServiceImpl implements WebsiteImagesService {

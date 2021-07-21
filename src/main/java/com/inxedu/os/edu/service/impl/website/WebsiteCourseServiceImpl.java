@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 推荐课程分类管理接口
  *
- * @author www.inxedu.com
+ 
  */
 @Service("websiteCourseService")
 public class WebsiteCourseServiceImpl implements WebsiteCourseService {

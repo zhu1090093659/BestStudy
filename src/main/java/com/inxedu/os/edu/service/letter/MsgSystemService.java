@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * @author : xiaokun
- * @author www.inxedu.com
+ 
  * @ClassName com.inxedu.os.sns.service.letter.MsgSenderService
  * @description 站内信的发件箱service
  * @Create Date : 2014-1-26 下午1:53:44

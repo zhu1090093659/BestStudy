@@ -10,8 +10,7 @@ import java.util.Map;
 
 /**
  * 课程收藏管理接口
- *
- * @author www.inxedu.com
+
  */
 public interface CourseFavoritesDao {
     /**

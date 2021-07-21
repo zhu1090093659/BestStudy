@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * WebsiteNavigateTbl管理接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface WebsiteNavigateDao {
 

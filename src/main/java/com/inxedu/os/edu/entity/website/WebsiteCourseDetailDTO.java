@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 推荐课程DTO
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

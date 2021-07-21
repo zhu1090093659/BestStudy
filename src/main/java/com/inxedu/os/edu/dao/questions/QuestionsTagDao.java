@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 问答标签dao层接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface QuestionsTagDao {
     /**

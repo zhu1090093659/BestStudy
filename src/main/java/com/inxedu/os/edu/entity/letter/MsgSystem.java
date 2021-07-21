@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * 系统站内信
  *
- * @author www.inxedu.com
+
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
