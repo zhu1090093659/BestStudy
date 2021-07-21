@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 网站配置
  *
- * @author www.inxedu.com
+ 
  */
 public interface WebsiteProfileDao {
     /**

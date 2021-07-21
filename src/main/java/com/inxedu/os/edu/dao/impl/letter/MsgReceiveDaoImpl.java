@@ -10,9 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @author www.inxedu.com
- */
+
 @Repository("msgReceiveDao")
 public class MsgReceiveDaoImpl extends GenericDaoImpl implements MsgReceiveDao {
     /**

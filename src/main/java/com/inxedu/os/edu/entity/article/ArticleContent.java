@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 文章内容
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class ArticleContent implements Serializable {

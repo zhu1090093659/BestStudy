@@ -207,11 +207,8 @@
 				</div>
 				<div class="tip-new-in-nr-bottom">
 					<div class="tip-new-in-b-txt f-fM fsize16 c-333">
-						开源版本切勿商用哦！别辜负了我们善良的初衷，不然因酷小伙伴可是要暴躁的哟。更多功能欢迎购买商业版。
-						<p class="f-fM fsize16 c-333 disFw">——因酷教育软件</p>
-					</div>
-					<div class="tip-new-in-b-btn">
-						<a href="http://www.inxedu.com" title="选购商业版" target="_blank">选购商业版</a>
+						这是一个测试版本
+						<p class="f-fM fsize16 c-333 disFw">——卓越教育</p>
 					</div>
 				</div>
 			</div>

@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * 站内信接收
  *
- * @author www.inxedu.com
+
  */
 public interface MsgReceiveService {
 

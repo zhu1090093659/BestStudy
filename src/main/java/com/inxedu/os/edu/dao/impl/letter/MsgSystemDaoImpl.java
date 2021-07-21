@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author www.inxedu.com
+
  * @description 站内信发件箱的Dao 实现
  */
 @Repository("MsgSystemDao")

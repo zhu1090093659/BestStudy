@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 问答
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class Questions implements Serializable {

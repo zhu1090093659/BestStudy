@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Teacher管理接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface TeacherService {
     /**

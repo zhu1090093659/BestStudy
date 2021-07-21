@@ -6,7 +6,7 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import java.net.URLEncoder;
 
 /**
- * @author www.inxedu.com
+ 
  */
 public class SmsServiceStub {
     private final String USERID = "";

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author www.inxedu.com
+ 
  */
 @Service("questionsCommentService")
 public class QuestionsCommentServiceImpl implements QuestionsCommentService {

@@ -10,8 +10,7 @@ import java.util.Date;
 /**
  * 帮助菜单
  *
- * @author http://www.inxedu.com
- */
+ * */
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class HelpMenu implements Serializable {

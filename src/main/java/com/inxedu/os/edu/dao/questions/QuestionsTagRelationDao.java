@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * 问答和 问答标签的 关联表dao层接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface QuestionsTagRelationDao {
     /**

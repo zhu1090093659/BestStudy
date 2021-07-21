@@ -4,7 +4,7 @@ package com.inxedu.os.edu.service.course;
 /**
  * CourseTeacher 课程讲师 管理接口
  *
- * @author www.inxedu.com
+
  */
 public interface CourseTeacherService {
 

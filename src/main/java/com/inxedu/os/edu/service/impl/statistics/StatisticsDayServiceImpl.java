@@ -16,7 +16,7 @@ import java.util.*;
 /**
  * StatisticsDayDay管理接口
  *
- * @author www.inxedu.com
+ 
  */
 @Service("statisticsDayService")
 public class StatisticsDayServiceImpl implements StatisticsDayService {

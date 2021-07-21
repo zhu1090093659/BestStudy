@@ -5,7 +5,7 @@ import com.inxedu.os.edu.entity.website.WebSiteImagesType;
 import java.util.List;
 
 /**
- * @author www.inxedu.com
+ 
  */
 public interface WebSiteImagesTypeService {
     /**

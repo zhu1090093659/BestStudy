@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * CourseFavorites 课程收藏 管理接口
  *
- * @author www.inxedu.com
+
  */
 public interface CourseFavoritesService {
     /**

@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * questions服务接口
  *
- * @author www.inxedu.com
+ 
  */
 public interface QuestionsService {
 

@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 专业dao层接口
  *
- * @author www.inxedu.com
+
  */
 public interface SubjectDao {
     /**

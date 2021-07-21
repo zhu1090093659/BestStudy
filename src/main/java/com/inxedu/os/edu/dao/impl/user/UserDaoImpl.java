@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author www.inxedu.com
+ 
  */
 @Repository("userDao")
 public class UserDaoImpl extends GenericDaoImpl implements UserDao {

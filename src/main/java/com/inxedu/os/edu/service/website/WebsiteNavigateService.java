@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * WebsiteNavigateTbl管理接口
  *
- * @author www.inxedu.com
+
  */
 public interface WebsiteNavigateService {
 

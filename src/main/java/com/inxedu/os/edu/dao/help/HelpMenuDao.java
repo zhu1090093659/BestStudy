@@ -8,8 +8,7 @@ import java.util.List;
 /**
  * 帮助菜单
  *
- * @author http://www.inxedu.com
- */
+ * */
 public interface HelpMenuDao {
 
     /**

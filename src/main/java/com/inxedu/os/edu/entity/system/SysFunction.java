@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 后台系统权限
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class SysFunction implements Serializable {

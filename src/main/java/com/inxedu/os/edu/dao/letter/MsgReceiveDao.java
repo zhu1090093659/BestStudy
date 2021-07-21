@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @author www.inxedu.com
+ 
  * @description 站内信Dao的接口
  */
 

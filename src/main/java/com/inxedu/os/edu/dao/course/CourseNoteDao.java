@@ -8,8 +8,6 @@ import java.util.List;
 
 /**
  * CourseNote管理接口
- *
- * @author www.inxedu.com
  */
 public interface CourseNoteDao {
 

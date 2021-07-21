@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 问答和 问答标签的 关联表service层接口实现
  *
- * @author www.inxedu.com
+ 
  */
 @Service("questionsTagRelationService")
 public class QuestionsTagRelationServiceImpl implements QuestionsTagRelationService {

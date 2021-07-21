@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * 后台用户
  *
- * @author www.inxedu.com
+ 
  */
 public interface SysUserDao {
     /***

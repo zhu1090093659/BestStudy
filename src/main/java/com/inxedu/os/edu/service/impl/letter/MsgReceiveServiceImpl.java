@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 /**
- * @author www.inxedu.com
+ 
  * @description 站内信的实现
  */
 @Service("msgReceiveService")

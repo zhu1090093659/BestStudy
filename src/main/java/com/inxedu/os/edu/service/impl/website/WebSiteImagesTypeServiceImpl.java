@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author www.inxedu.com
+ 
  */
 @Service("webSiteImagesTypeService")
 public class WebSiteImagesTypeServiceImpl implements WebSiteImagesTypeService {

@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * 广告图片类型
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class WebSiteImagesType implements Serializable {

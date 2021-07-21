@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * @author www.inxedu.com
+ 
  */
 public interface UserMobileMsgService {
     /**

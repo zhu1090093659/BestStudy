@@ -8,9 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-/**
- * @author www.inxedu.com
- */
+
 @Repository("questionsDao")
 public class QuestionsDaoImpl extends GenericDaoImpl implements QuestionsDao {
 

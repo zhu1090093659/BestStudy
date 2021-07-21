@@ -14,7 +14,7 @@ import java.util.Map;
 /**
  * 推荐课程关联Dao层
  *
- * @author www.inxedu.com
+ 
  */
 @Repository("websiteCourseDetailDao")
 public class WebsiteCourseDetailDaoImpl extends GenericDaoImpl implements WebsiteCourseDetailDao {

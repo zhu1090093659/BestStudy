@@ -8,7 +8,7 @@ import java.util.List;
 
 
 /**
- * @author www.inxedu.com
+
  * @description 站内信发件箱的Dao
  */
 public interface MsgSystemDao {

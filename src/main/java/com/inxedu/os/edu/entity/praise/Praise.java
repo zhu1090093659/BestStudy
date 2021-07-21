@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * 点赞表
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class Praise implements Serializable {

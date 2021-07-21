@@ -11,8 +11,7 @@ import java.util.List;
 
 
 /**
- * @author http://www.inxedu.com
- */
+ * */
 public class EmailThread implements Runnable {
     //发送邮件service
     private EmailService emailService;

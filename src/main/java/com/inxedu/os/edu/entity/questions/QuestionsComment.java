@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 问答评论
  *
- * @author www.inxedu.com
+ 
  */
 @Data
 public class QuestionsComment implements Serializable {
