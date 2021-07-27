@@ -7,11 +7,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="inxedu" />
+        <module name="demo_inxedu_open" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="inxedu" target="1.7" />
+      <module name="demo_inxedu_open" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

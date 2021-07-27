@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.slf4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -24,7 +25,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/admin")
 public class AdminQuestionsCommentController extends BaseController {
-    private static final org.slf4j.Logger logger = LoggerFactory.getLogger(AdminQuestionsCommentController.class);
+    private static final Logger logger = LoggerFactory.getLogger(AdminQuestionsCommentController.class);
 
     @Autowired
     private QuestionsService questionsService;

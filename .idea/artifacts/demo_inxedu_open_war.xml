@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="demo_inxedu_open:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>demo_inxedu_open</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="inxedu.war">
+      <element id="artifact" artifact-name="demo_inxedu_open:war exploded" />
+    </root>
+  </artifact>
+</component>

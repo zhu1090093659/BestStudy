@@ -40,7 +40,7 @@ public class CourseController extends BaseController {
     // 课程列表
     private static final String showCourseList = getViewPath("/web/course/courses-list");
     // 课程详情
-    private static final String couinfo = getViewPath("/web/course/course-infor");
+    private static final String couInfo = getViewPath("/web/course/course-infor");
 
     @Autowired
     private CourseService courseService;
@@ -125,7 +125,7 @@ public class CourseController extends BaseController {
     public ModelAndView couinfo(HttpServletRequest request, @PathVariable("id") int courseId) {
         ModelAndView model = new ModelAndView();
         try {
-            model.setViewName(couinfo);
+            model.setViewName(couInfo);
             // 查询课程详情
             Course course = courseService.queryCourseById(courseId);
             if (course != null) {
